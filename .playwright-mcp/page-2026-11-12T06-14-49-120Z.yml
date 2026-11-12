@@ -1,0 +1,154 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Coffee Corner หน้าแรก" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [aria-hidden] [ref=e5]: ☕
+        - generic [ref=e6]:
+          - generic [ref=e7]: coffee corner
+          - generic [ref=e8]: YOUR DAILY CUP
+      - navigation "เมนูหลัก" [ref=e9]:
+        - link "เมนูเครื่องดื่ม" [ref=e10] [cursor=pointer]:
+          - /url: "#menu"
+        - link "ออเดอร์ล่าสุด" [ref=e11] [cursor=pointer]:
+          - /url: "#orders"
+      - link "สั่งล่วงหน้า" [ref=e12] [cursor=pointer]:
+        - /url: "#order-form"
+        - text: สั่งล่วงหน้า
+        - generic [aria-hidden] [ref=e13]: ↗
+  - main [ref=e14]:
+    - region [ref=e15]:
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: YOUR DAILY COFFEE BREAK
+        - heading "พักสักนิด แล้วเติมแก้วโปรด" [level=1] [ref=e19]: พักสักนิดแล้วเติมแก้วโปรด
+        - paragraph [ref=e20]: เลือกเครื่องดื่มที่ชอบ สั่งไว้ก่อนได้เลย แล้วค่อยแวะมารับตอนพร้อม
+        - link "ดูเมนูทั้งหมด" [ref=e21] [cursor=pointer]:
+          - /url: "#menu"
+          - text: ดูเมนูทั้งหมด
+          - generic [aria-hidden] [ref=e22]: ↗
+      - generic [ref=e28]:
+        - text: GOOD COFFEE
+        - strong [ref=e30]: GOOD DAY
+        - generic [ref=e31]: ✳
+    - generic [ref=e34]:
+      - generic [ref=e35]: สดใหม่ทุกแก้ว · สั่งง่ายในวันทำงาน
+      - generic [ref=e36]: CRAFTED FOR YOUR BREAK ✳
+    - generic [ref=e37]:
+      - region [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - paragraph [ref=e41]: 01 / THE MENU
+            - heading "เลือกแก้วที่ใช่" [level=2] [ref=e42]
+            - paragraph [ref=e43]: ชงสดทุกแก้ว เติมพลังระหว่างวัน
+          - generic [ref=e44]: 6 เมนู
+        - group "กรองเมนูตามหมวด" [ref=e45]:
+          - button "ทั้งหมด" [pressed] [ref=e46] [cursor=pointer]
+          - button "Coffee" [ref=e47] [cursor=pointer]
+          - button "Tea" [ref=e48] [cursor=pointer]
+          - button "Other" [ref=e49] [cursor=pointer]
+        - generic [ref=e50]:
+          - article [ref=e51]:
+            - generic [aria-hidden] [ref=e52]:
+              - generic [ref=e54]: ☕
+              - generic [ref=e55]: COFFEE
+            - generic [ref=e56]:
+              - heading "Americano" [level=3] [ref=e57]
+              - generic [ref=e58]:
+                - paragraph [ref=e59]: ต่อแก้ว
+                - paragraph [ref=e60]: 60 บาท
+          - article [ref=e61]:
+            - generic [aria-hidden] [ref=e62]:
+              - generic [ref=e64]: 🥛
+              - generic [ref=e65]: COFFEE
+            - generic [ref=e66]:
+              - heading "Latte" [level=3] [ref=e67]
+              - generic [ref=e68]:
+                - paragraph [ref=e69]: ต่อแก้ว
+                - paragraph [ref=e70]: 70 บาท
+          - article [ref=e71]:
+            - generic [aria-hidden] [ref=e72]:
+              - generic [ref=e74]: 🍫
+              - generic [ref=e75]: หมด
+              - generic [ref=e76]: COFFEE
+            - generic [ref=e77]:
+              - heading "Mocha หมด" [level=3] [ref=e78]:
+                - text: Mocha
+                - generic [ref=e79]: หมด
+              - generic [ref=e80]:
+                - paragraph [ref=e81]: ต่อแก้ว
+                - paragraph [ref=e82]: 75 บาท
+          - article [ref=e83]:
+            - generic [aria-hidden] [ref=e84]:
+              - generic [ref=e86]: 🍵
+              - generic [ref=e87]: TEA
+            - generic [ref=e88]:
+              - heading "Matcha Latte" [level=3] [ref=e89]
+              - generic [ref=e90]:
+                - paragraph [ref=e91]: ต่อแก้ว
+                - paragraph [ref=e92]: 80 บาท
+          - article [ref=e93]:
+            - generic [aria-hidden] [ref=e94]:
+              - generic [ref=e96]: 🧋
+              - generic [ref=e97]: TEA
+            - generic [ref=e98]:
+              - heading "Thai Tea" [level=3] [ref=e99]
+              - generic [ref=e100]:
+                - paragraph [ref=e101]: ต่อแก้ว
+                - paragraph [ref=e102]: 55 บาท
+          - article [ref=e103]:
+            - generic [aria-hidden] [ref=e104]:
+              - generic [ref=e106]: 🍫
+              - generic [ref=e107]: OTHER
+            - generic [ref=e108]:
+              - heading "Cocoa" [level=3] [ref=e109]
+              - generic [ref=e110]:
+                - paragraph [ref=e111]: ต่อแก้ว
+                - paragraph [ref=e112]: 65 บาท
+      - region [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - paragraph [ref=e116]: 02 / PLACE AN ORDER
+            - heading "สั่งเครื่องดื่ม" [level=2] [ref=e117]
+            - paragraph [ref=e118]: หนึ่งออเดอร์เลือกได้หนึ่งเมนู
+          - generic [aria-hidden] [ref=e119]: ✳
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - generic [ref=e122]: ชื่อผู้สั่ง
+            - textbox "ชื่อผู้สั่ง" [ref=e123]:
+              - /placeholder: เช่น มินตรา
+          - generic [ref=e124]:
+            - generic [ref=e125]: เมนูที่เลือก
+            - combobox "เมนูที่เลือก" [ref=e126]:
+              - option "เลือกเครื่องดื่ม" [selected]
+              - option "Americano — 60 บาท"
+              - option "Latte — 70 บาท"
+              - option "Mocha — 75 บาท · หมด" [disabled]
+              - option "Matcha Latte — 80 บาท"
+              - option "Thai Tea — 55 บาท"
+              - option "Cocoa — 65 บาท"
+          - generic [ref=e127]:
+            - generic [ref=e128]: จำนวน (1–5 แก้ว)
+            - spinbutton "จำนวน (1–5 แก้ว)" [ref=e129]: "1"
+          - generic [ref=e130]:
+            - generic [ref=e131]: หมายเหตุ (ไม่บังคับ)
+            - textbox "หมายเหตุ (ไม่บังคับ)" [ref=e132]:
+              - /placeholder: เช่น หวานน้อย ไม่ใส่น้ำแข็ง
+          - button "ยืนยันออเดอร์" [ref=e133] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e134]: ＋
+            - text: ยืนยันออเดอร์
+            - generic [aria-hidden] [ref=e135]: ↗
+        - paragraph [ref=e136]: ออเดอร์เก็บไว้ใน browser นี้ด้วย localStorageไม่เชื่อมบัญชีผู้ใช้หรือระบบชำระเงิน
+    - region [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - paragraph [ref=e140]: 03 / FRESHLY PLACED
+          - heading "ออเดอร์ล่าสุด" [level=2] [ref=e141]
+        - generic [ref=e142]: 0 รายการ
+      - generic [ref=e144]:
+        - generic [aria-hidden] [ref=e145]: ✳
+        - text: ยังไม่มีออเดอร์ ลองสั่งแก้วโปรดเป็นรายการแรกได้เลย
+  - contentinfo [ref=e146]:
+    - generic [ref=e147]:
+      - generic [ref=e148]: coffee corner · สั่งง่าย จิบสบาย ในวันทำงาน
+      - generic [ref=e149]: MADE FOR THE LITTLE BREAKS ✳
+  - alert [ref=e150]

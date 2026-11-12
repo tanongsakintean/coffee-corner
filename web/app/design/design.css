@@ -1,0 +1,46 @@
+.design-cover {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 83% 26%, rgb(255 183 127 / 24%), transparent 28rem),
+    linear-gradient(115deg, var(--color-primary), var(--color-coffee) 72%, #674830);
+  box-shadow: 0 22px 54px rgb(57 42 29 / 16%);
+}
+
+.design-cover::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-linear-gradient(105deg, transparent 0 5px, rgb(255 255 255 / 2%) 5px 6px);
+  content: "";
+  pointer-events: none;
+}
+
+.design-cover-art {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  display: grid;
+  width: 240px;
+  height: 240px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgb(255 255 255 / 5%), 0 0 0 75px rgb(255 255 255 / 3%);
+  color: var(--color-secondary-container);
+  font-size: 76px;
+  transform: translateY(-50%) rotate(-9deg);
+  pointer-events: none;
+}
+
+.design-swatch {
+  box-shadow: inset 0 0 0 1px rgb(57 42 29 / 12%);
+}
+
+@media (max-width: 800px) {
+  .design-cover-art {
+    right: -82px;
+    width: 190px;
+    height: 190px;
+    opacity: .26;
+  }
+}

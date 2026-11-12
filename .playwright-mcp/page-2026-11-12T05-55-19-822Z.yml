@@ -1,0 +1,109 @@
+- generic [active] [ref=f8e1]:
+  - banner [ref=f8e2]:
+    - link "Coffee Corner หน้าแรก" [ref=f8e3] [cursor=pointer]:
+      - /url: "#"
+      - generic [aria-hidden] [ref=f8e4]: ☕
+      - generic [ref=f8e5]: coffee corner
+    - generic [ref=f8e6]: Coffee break ของชาวออฟฟิศ
+  - main [ref=f8e7]:
+    - region [ref=f8e8]:
+      - generic [ref=f8e9]:
+        - paragraph [ref=f8e10]: YOUR DAILY COFFEE BREAK
+        - heading "พักสักนิด แล้วเติมแก้วโปรด" [level=1] [ref=f8e12]: พักสักนิดแล้วเติมแก้วโปรด
+        - paragraph [ref=f8e13]: เลือกเครื่องดื่มที่ชอบ สั่งไว้ก่อนได้เลย แล้วค่อยแวะมารับตอนพร้อม
+      - generic [ref=f8e15]: ☕
+    - generic [ref=f8e17]:
+      - region [ref=f8e18]:
+        - generic [ref=f8e19]:
+          - generic [ref=f8e20]:
+            - paragraph [ref=f8e21]: THE MENU
+            - heading "เลือกแก้วที่ใช่" [level=2] [ref=f8e22]
+            - paragraph [ref=f8e23]: ชงสดทุกแก้ว เติมพลังระหว่างวัน
+          - generic [ref=f8e24]: 6 เมนู
+        - group "กรองเมนูตามหมวด" [ref=f8e25]:
+          - button "ทั้งหมด" [pressed] [ref=f8e26] [cursor=pointer]
+          - button "Coffee" [ref=f8e27] [cursor=pointer]
+          - button "Tea" [ref=f8e28] [cursor=pointer]
+          - button "Other" [ref=f8e29] [cursor=pointer]
+        - generic [ref=f8e30]:
+          - article [ref=f8e31]:
+            - generic [ref=f8e33]: ☕
+            - generic [ref=f8e34]:
+              - paragraph [ref=f8e35]: Coffee
+              - heading "Americano" [level=3] [ref=f8e36]
+              - paragraph [ref=f8e37]: 60 บาท / แก้ว
+          - article [ref=f8e38]:
+            - generic [ref=f8e40]: 🥛
+            - generic [ref=f8e41]:
+              - paragraph [ref=f8e42]: Coffee
+              - heading "Latte" [level=3] [ref=f8e43]
+              - paragraph [ref=f8e44]: 70 บาท / แก้ว
+          - article [ref=f8e45]:
+            - generic [aria-hidden] [ref=f8e46]:
+              - generic [ref=f8e47]: 🍫
+              - generic [ref=f8e48]: หมด
+            - generic [ref=f8e49]:
+              - paragraph [ref=f8e50]: Coffee
+              - heading "Mocha" [level=3] [ref=f8e51]
+              - paragraph [ref=f8e52]: 75 บาท / แก้ว
+          - article [ref=f8e53]:
+            - generic [ref=f8e55]: 🍵
+            - generic [ref=f8e56]:
+              - paragraph [ref=f8e57]: Tea
+              - heading "Matcha Latte" [level=3] [ref=f8e58]
+              - paragraph [ref=f8e59]: 80 บาท / แก้ว
+          - article [ref=f8e60]:
+            - generic [ref=f8e62]: 🧋
+            - generic [ref=f8e63]:
+              - paragraph [ref=f8e64]: Tea
+              - heading "Thai Tea" [level=3] [ref=f8e65]
+              - paragraph [ref=f8e66]: 55 บาท / แก้ว
+          - article [ref=f8e67]:
+            - generic [ref=f8e69]: 🍫
+            - generic [ref=f8e70]:
+              - paragraph [ref=f8e71]: Other
+              - heading "Cocoa" [level=3] [ref=f8e72]
+              - paragraph [ref=f8e73]: 65 บาท / แก้ว
+      - region [ref=f8e74]:
+        - generic [ref=f8e75]:
+          - generic [ref=f8e76]:
+            - paragraph [ref=f8e77]: PLACE AN ORDER
+            - heading "สั่งเครื่องดื่ม" [level=2] [ref=f8e78]
+            - paragraph [ref=f8e79]: หนึ่งออเดอร์เลือกได้หนึ่งเมนู
+          - generic [aria-hidden] [ref=f8e80]: ✳
+        - generic [ref=f8e81]:
+          - generic [ref=f8e82]:
+            - generic [ref=f8e83]: ชื่อผู้สั่ง
+            - textbox "ชื่อผู้สั่ง" [ref=f8e84]:
+              - /placeholder: เช่น มินตรา
+          - generic [ref=f8e85]:
+            - generic [ref=f8e86]: เมนูที่เลือก
+            - combobox "เมนูที่เลือก" [ref=f8e87]:
+              - option "เลือกเครื่องดื่ม" [selected]
+              - option "Americano — 60 บาท"
+              - option "Latte — 70 บาท"
+              - option "Mocha — 75 บาท · หมด" [disabled]
+              - option "Matcha Latte — 80 บาท"
+              - option "Thai Tea — 55 บาท"
+              - option "Cocoa — 65 บาท"
+          - generic [ref=f8e88]:
+            - generic [ref=f8e89]: จำนวน (1–5 แก้ว)
+            - spinbutton "จำนวน (1–5 แก้ว)" [ref=f8e90]: "1"
+          - generic [ref=f8e91]:
+            - generic [ref=f8e92]: หมายเหตุ (ไม่บังคับ)
+            - textbox "หมายเหตุ (ไม่บังคับ)" [ref=f8e93]:
+              - /placeholder: เช่น หวานน้อย ไม่ใส่น้ำแข็ง
+          - status
+          - button "ยืนยันออเดอร์" [ref=f8e94] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f8e95]: ＋
+            - text: ยืนยันออเดอร์
+        - paragraph [ref=f8e96]: ออเดอร์เก็บไว้ใน browser นี้ด้วย localStorageไม่เชื่อมบัญชีผู้ใช้หรือระบบชำระเงิน
+    - region [ref=f8e97]:
+      - generic [ref=f8e98]:
+        - generic [ref=f8e99]:
+          - paragraph [ref=f8e100]: FRESHLY PLACED
+          - heading "ออเดอร์ล่าสุด" [level=2] [ref=f8e101]
+        - generic [ref=f8e102]: 0 รายการ
+      - generic [ref=f8e103]: ยังไม่มีออเดอร์ ลองสั่งแก้วโปรดเป็นรายการแรกได้เลย
+  - contentinfo [ref=f8e105]: Coffee Corner · สั่งง่าย จิบสบาย ในวันทำงาน
+  - alert [ref=f8e106]

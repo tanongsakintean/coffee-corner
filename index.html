@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3ec">
+  <meta name="description" content="เลือกเครื่องดื่มแก้วโปรดและสั่งล่วงหน้ากับ Coffee Corner">
+  <link rel="icon" href="data:,">
+  <title>Coffee Corner — สั่งเครื่องดื่มล่วงหน้า</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #302820;
+      --muted: #82786c;
+      --coffee: #523a2d;
+      --coffee-dark: #38271f;
+      --cream: #f6f3ec;
+      --paper: #fffefa;
+      --line: #e9e3d9;
+      --sage: #62735c;
+      --sage-light: #edf1e9;
+      --orange: #c78652;
+      --danger: #a84c3d;
+      --shadow: 0 18px 48px rgb(57 42 29 / 7%);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(ellipse at 87% 2%, rgb(217 204 181 / 28%), transparent 27rem),
+        var(--cream);
+      color: var(--ink);
+    }
+
+    button, input, select, textarea { font: inherit; }
+    button { color: inherit; }
+
+    .shell {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--coffee-dark);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--coffee);
+      color: white;
+      font-size: 19px;
+    }
+
+    .topbar-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 292px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      padding: 43px 58px;
+      border-radius: 25px;
+      background:
+        radial-gradient(ellipse at 83% 45%, rgb(206 160 112 / 18%), transparent 18rem),
+        linear-gradient(115deg, #493329, #30251f 72%);
+      color: #fffaf3;
+      box-shadow: 0 22px 56px rgb(48 35 26 / 16%);
+    }
+
+    .hero::before, .hero::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgb(255 255 255 / 9%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 330px;
+      height: 330px;
+      right: -34px;
+      top: -126px;
+    }
+
+    .hero::after {
+      width: 245px;
+      height: 245px;
+      right: 8px;
+      top: -83px;
+    }
+
+    .hero-copy, .hero-art { position: relative; z-index: 1; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 17px;
+      color: #e6c49e;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9a76f;
+    }
+
+    h1, h2, p { margin-top: 0; }
+
+    h1 {
+      max-width: 570px;
+      margin-bottom: 12px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.16;
+      letter-spacing: -.045em;
+    }
+
+    .hero-description {
+      max-width: 455px;
+      margin-bottom: 0;
+      color: #d4c7b8;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .hero-art {
+      min-height: 205px;
+      display: grid;
+      place-items: center;
+    }
+
+    .cup-orbit {
+      width: 196px;
+      height: 196px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgb(255 255 255 / 17%);
+      border-radius: 50%;
+      background: rgb(255 255 255 / 5%);
+      box-shadow: inset 0 0 0 16px rgb(255 255 255 / 3%);
+    }
+
+    .cup {
+      width: 112px;
+      height: 112px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgb(255 255 255 / 45%);
+      border-radius: 34px;
+      background: linear-gradient(145deg, #f5e6d0, #d6b995);
+      color: #6b4835;
+      font-size: 50px;
+      transform: rotate(-8deg);
+      box-shadow: 0 20px 35px rgb(0 0 0 / 23%);
+    }
+
+    .hero-sticker {
+      position: absolute;
+      right: -10px;
+      bottom: 25px;
+      padding: 11px 14px;
+      border: 1px solid rgb(255 255 255 / 15%);
+      border-radius: 14px;
+      background: #fffaf3;
+      color: var(--coffee);
+      font-size: 11px;
+      font-weight: 800;
+      box-shadow: 0 12px 25px rgb(0 0 0 / 16%);
+      transform: rotate(4deg);
+    }
+
+    .hero-sticker strong {
+      display: block;
+      margin-top: 2px;
+      font-size: 17px;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(300px, .75fr);
+      align-items: start;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .panel {
+      min-width: 0;
+      padding: 27px;
+      border: 1px solid rgb(231 225 215 / 85%);
+      border-radius: 21px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 21px;
+    }
+
+    .section-kicker {
+      margin-bottom: 6px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 22px;
+      letter-spacing: -.035em;
+    }
+
+    .section-caption {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .menu-count {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #f4eee5;
+      color: #6b5744;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .filter-button {
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: #71675b;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: background .18s ease, color .18s ease, border-color .18s ease;
+    }
+
+    .filter-button:hover { border-color: #bcae9b; }
+
+    .filter-button[aria-pressed="true"] {
+      border-color: var(--coffee);
+      background: var(--coffee);
+      color: #fffaf3;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .menu-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fff;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgb(57 42 29 / 8%);
+    }
+
+    .menu-card.is-sold-out { background: #faf8f4; }
+
+    .menu-art {
+      height: 82px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      font-size: 34px;
+    }
+
+    .menu-art::before, .menu-art::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgb(86 66 46 / 10%);
+      border-radius: 50%;
+    }
+
+    .menu-art::before { width: 82px; height: 82px; }
+    .menu-art::after { width: 58px; height: 58px; }
+    .menu-art span { position: relative; z-index: 1; }
+    .menu-art--coffee { background: #efe4d6; }
+    .menu-art--tea { background: #e9efe3; }
+    .menu-art--other { background: #f2e5dc; }
+    .is-sold-out .menu-art { filter: saturate(.35); }
+
+    .sold-out-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      padding: 4px 7px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--danger);
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .menu-card-body { padding: 11px 12px 12px; }
+
+    .menu-category {
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .menu-name {
+      overflow: hidden;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .menu-price {
+      color: var(--coffee);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .menu-price span {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    .order-panel { position: sticky; top: 16px; }
+
+    .form-stack { display: grid; gap: 15px; }
+
+    .field { display: grid; gap: 7px; }
+
+    .field label {
+      color: #554b40;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .field-hint {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-height: 43px;
+      padding: 10px 12px;
+      border: 1px solid #e4ddd2;
+      border-radius: 10px;
+      outline: none;
+      background: #fff;
+      color: var(--ink);
+      font-size: 13px;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .field textarea {
+      min-height: 78px;
+      resize: vertical;
+    }
+
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: #927257;
+      box-shadow: 0 0 0 3px rgb(146 114 87 / 13%);
+    }
+
+    .field [aria-invalid="true"] { border-color: var(--danger); }
+
+    .field-error {
+      margin: -2px 0 0;
+      color: var(--danger);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .field-error[hidden] { display: none; }
+
+    .form-message {
+      min-height: 0;
+      margin: 0;
+      border-radius: 10px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .form-message:not(:empty) { padding: 10px 12px; }
+    .form-message--error { background: #fbefeb; color: #914438; }
+    .form-message--success { background: var(--sage-light); color: #4f654a; }
+    .form-message--notice { background: #f6f0e4; color: #725c3d; }
+
+    .submit-button {
+      width: 100%;
+      min-height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 11px;
+      background: var(--coffee);
+      color: #fffaf3;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .submit-button:hover {
+      background: var(--coffee-dark);
+      transform: translateY(-1px);
+    }
+
+    .submit-button:focus-visible, .filter-button:focus-visible {
+      outline: 3px solid rgb(199 134 82 / 42%);
+      outline-offset: 2px;
+    }
+
+    .privacy-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .orders-panel { margin: 22px 0 38px; }
+
+    .orders-heading {
+      align-items: center;
+      margin-bottom: 17px;
+    }
+
+    .orders-count {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .orders-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .order-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 10px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fff;
+    }
+
+    .order-person {
+      margin-bottom: 4px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .order-detail {
+      margin-bottom: 5px;
+      color: #665c51;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .order-note {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .order-total {
+      color: var(--coffee);
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .order-time {
+      grid-column: 1 / -1;
+      padding-top: 8px;
+      border-top: 1px solid #f0ece5;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .empty-orders {
+      padding: 27px 18px;
+      border: 1px dashed #ded5c9;
+      border-radius: 13px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .footer {
+      padding: 0 0 28px;
+      color: #958b7e;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding: 38px; }
+      .workspace { grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); }
+      .panel { padding: 22px; }
+      .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-art { transform: scale(.88); }
+    }
+
+    @media (max-width: 680px) {
+      .shell { width: min(100% - 30px, 520px); }
+      .topbar { min-height: 68px; }
+      .topbar-note { font-size: 11px; }
+      .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        padding: 31px 25px 24px;
+        border-radius: 19px;
+      }
+      h1 { max-width: 420px; font-size: 34px; }
+      .hero-description { font-size: 13px; }
+      .hero-art {
+        position: absolute;
+        right: -16px;
+        bottom: -60px;
+        min-height: 0;
+        opacity: .34;
+        transform: scale(.83);
+      }
+      .hero-sticker { display: none; }
+      .workspace { grid-template-columns: 1fr; gap: 14px; margin-top: 15px; }
+      .panel { padding: 20px; border-radius: 17px; }
+      .order-panel { position: static; }
+      .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .orders-panel { margin-top: 14px; }
+      .orders-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 380px) {
+      .shell { width: calc(100% - 22px); }
+      .hero { padding-inline: 20px; }
+      .panel { padding: 16px; }
+      .menu-grid { gap: 8px; }
+      .menu-art { height: 72px; }
+      .menu-card-body { padding: 10px; }
+      .filter-button { padding-inline: 11px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#" aria-label="Coffee Corner หน้าแรก">
+      <span class="brand-mark" aria-hidden="true">☕</span>
+      <span>coffee corner</span>
+    </a>
+    <span class="topbar-note">Coffee break ของชาวออฟฟิศ</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> YOUR DAILY COFFEE BREAK</p>
+        <h1 id="hero-title">พักสักนิด<br>แล้วเติมแก้วโปรด</h1>
+        <p class="hero-description">เลือกเครื่องดื่มที่ชอบ สั่งไว้ก่อนได้เลย แล้วค่อยแวะมารับตอนพร้อม</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="cup-orbit"><div class="cup">☕</div></div>
+        <div class="hero-sticker">เมนูวันนี้<strong>6 แก้วโปรด</strong></div>
+      </div>
+    </section>
+
+    <div class="workspace">
+      <section class="panel" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">THE MENU</p>
+            <h2 id="menu-title">เลือกแก้วที่ใช่</h2>
+            <p class="section-caption">ชงสดทุกแก้ว เติมพลังระหว่างวัน</p>
+          </div>
+          <span class="menu-count" id="menu-count">6 เมนู</span>
+        </div>
+
+        <div class="filters" role="group" aria-label="กรองเมนูตามหมวด">
+          <button class="filter-button" type="button" data-category="All" aria-pressed="true">ทั้งหมด</button>
+          <button class="filter-button" type="button" data-category="Coffee" aria-pressed="false">Coffee</button>
+          <button class="filter-button" type="button" data-category="Tea" aria-pressed="false">Tea</button>
+          <button class="filter-button" type="button" data-category="Other" aria-pressed="false">Other</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel order-panel" aria-labelledby="order-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">PLACE AN ORDER</p>
+            <h2 id="order-title">สั่งเครื่องดื่ม</h2>
+            <p class="section-caption">หนึ่งออเดอร์เลือกได้หนึ่งเมนู</p>
+          </div>
+          <span aria-hidden="true">✳</span>
+        </div>
+
+        <form id="order-form" class="form-stack" novalidate>
+          <div class="field">
+            <label for="customer-name">ชื่อผู้สั่ง</label>
+            <input id="customer-name" name="customerName" type="text" autocomplete="name" maxlength="80" placeholder="เช่น มินตรา" required aria-describedby="name-error">
+            <p class="field-error" id="name-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="drink">เมนูที่เลือก</label>
+            <select id="drink" name="drink" required aria-describedby="drink-error">
+              <option value="">เลือกเครื่องดื่ม</option>
+            </select>
+            <p class="field-error" id="drink-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="quantity">จำนวน <span class="field-hint">(1–5 แก้ว)</span></label>
+            <input id="quantity" name="quantity" type="number" min="1" max="5" step="1" value="1" inputmode="numeric" required aria-describedby="quantity-error">
+            <p class="field-error" id="quantity-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="note">หมายเหตุ <span class="field-hint">(ไม่บังคับ)</span></label>
+            <textarea id="note" name="note" maxlength="200" placeholder="เช่น หวานน้อย ไม่ใส่น้ำแข็ง"></textarea>
+          </div>
+
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          <button class="submit-button" type="submit"><span aria-hidden="true">＋</span> ยืนยันออเดอร์</button>
+        </form>
+        <p class="privacy-note">ออเดอร์เก็บไว้ใน browser นี้ด้วย localStorage<br>ไม่เชื่อมบัญชีผู้ใช้หรือระบบชำระเงิน</p>
+      </section>
+    </div>
+
+    <section class="panel orders-panel" aria-labelledby="orders-title">
+      <div class="section-heading orders-heading">
+        <div>
+          <p class="section-kicker">FRESHLY PLACED</p>
+          <h2 id="orders-title">ออเดอร์ล่าสุด</h2>
+        </div>
+        <span class="orders-count" id="orders-count">0 รายการ</span>
+      </div>
+      <div class="orders-list" id="orders-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="shell footer">Coffee Corner · สั่งง่าย จิบสบาย ในวันทำงาน</footer>
+
+  <script>
+    const STORAGE_KEY = "coffee-corner.orders.v1";
+    const menu = [
+      { id: "americano", name: "Americano", category: "Coffee", price: 60, available: true, icon: "☕" },
+      { id: "latte", name: "Latte", category: "Coffee", price: 70, available: true, icon: "🥛" },
+      { id: "mocha", name: "Mocha", category: "Coffee", price: 75, available: false, icon: "🍫" },
+      { id: "matcha-latte", name: "Matcha Latte", category: "Tea", price: 80, available: true, icon: "🍵" },
+      { id: "thai-tea", name: "Thai Tea", category: "Tea", price: 55, available: true, icon: "🧋" },
+      { id: "cocoa", name: "Cocoa", category: "Other", price: 65, available: true, icon: "🍫" }
+    ];
+
+    const menuGrid = document.querySelector("#menu-grid");
+    const menuCount = document.querySelector("#menu-count");
+    const drinkSelect = document.querySelector("#drink");
+    const orderForm = document.querySelector("#order-form");
+    const formMessage = document.querySelector("#form-message");
+    const ordersList = document.querySelector("#orders-list");
+    const ordersCount = document.querySelector("#orders-count");
+    const nameInput = document.querySelector("#customer-name");
+    const quantityInput = document.querySelector("#quantity");
+    const noteInput = document.querySelector("#note");
+    let selectedCategory = "All";
+    let storageAvailable = true;
+    let orders = loadOrders();
+
+    function loadOrders() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        const parsed = stored ? JSON.parse(stored) : [];
+        if (!Array.isArray(parsed)) throw new TypeError("Invalid saved orders");
+        return parsed.filter(isValidOrder);
+      } catch {
+        storageAvailable = false;
+        setMessage("อ่านออเดอร์ที่บันทึกไว้ไม่ได้ รายการใหม่จะแสดงเฉพาะระหว่างเปิดหน้านี้", "notice");
+        return [];
+      }
+    }
+
+    function isValidOrder(order) {
+      if (!order || typeof order !== "object") return false;
+      const item = menu.find((entry) => entry.id === order.drinkId);
+      return typeof order.id === "string"
+        && typeof order.name === "string"
+        && Boolean(item && item.available)
+        && Number.isInteger(order.quantity)
+        && order.quantity >= 1
+        && order.quantity <= 5
+        && order.total === item.price * order.quantity
+        && typeof order.note === "string"
+        && !Number.isNaN(Date.parse(order.createdAt));
+    }
+
+    function setMessage(text, kind = "") {
+      formMessage.textContent = text;
+      formMessage.className = `form-message${kind ? ` form-message--${kind}` : ""}`;
+    }
+
+    function formatBaht(amount) {
+      return `${amount.toLocaleString("th-TH")} บาท`;
+    }
+
+    function createElement(tag, className, text) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (text !== undefined) element.textContent = text;
+      return element;
+    }
+
+    function renderMenu() {
+      const visibleMenu = menu.filter((item) => selectedCategory === "All" || item.category === selectedCategory);
+      menuCount.textContent = `${visibleMenu.length} เมนู`;
+      menuGrid.replaceChildren();
+
+      visibleMenu.forEach((item) => {
+        const card = createElement("article", `menu-card${item.available ? "" : " is-sold-out"}`);
+        card.dataset.menuId = item.id;
+        const art = createElement("div", `menu-art menu-art--${item.category.toLowerCase()}`);
+        art.setAttribute("aria-hidden", "true");
+        art.append(createElement("span", "", item.icon));
+        if (!item.available) art.append(createElement("span", "sold-out-badge", "หมด"));
+
+        const body = createElement("div", "menu-card-body");
+        body.append(
+          createElement("p", "menu-category", item.category),
+          createElement("h3", "menu-name", item.name)
+        );
+        const price = createElement("p", "menu-price");
+        price.append(document.createTextNode(`${item.price} บาท `), createElement("span", "", "/ แก้ว"));
+        body.append(price);
+        card.append(art, body);
+        menuGrid.append(card);
+      });
+    }
+
+    function populateDrinkOptions() {
+      menu.forEach((item) => {
+        const option = document.createElement("option");
+        option.value = item.id;
+        option.textContent = `${item.name} — ${item.price} บาท${item.available ? "" : " · หมด"}`;
+        option.disabled = !item.available;
+        drinkSelect.append(option);
+      });
+    }
+
+    function renderOrders() {
+      ordersCount.textContent = `${orders.length} รายการ`;
+      ordersList.replaceChildren();
+      if (!orders.length) {
+        ordersList.append(createElement("div", "empty-orders", "ยังไม่มีออเดอร์ ลองสั่งแก้วโปรดเป็นรายการแรกได้เลย"));
+        return;
+      }
+
+      orders.forEach((order, index) => {
+        const item = menu.find((entry) => entry.id === order.drinkId);
+        const card = createElement("article", "order-card");
+        const details = createElement("div");
+        details.append(
+          createElement("p", "order-person", order.name),
+          createElement("p", "order-detail", `${item.name} · ${order.quantity} แก้ว`)
+        );
+        if (order.note) details.append(createElement("p", "order-note", `หมายเหตุ: ${order.note}`));
+        card.append(details, createElement("p", "order-total", formatBaht(order.total)));
+        const timestamp = new Date(order.createdAt);
+        card.append(createElement("time", "order-time", `ออเดอร์ #${orders.length - index} · ${new Intl.DateTimeFormat("th-TH", { dateStyle: "medium", timeStyle: "short" }).format(timestamp)}`));
+        ordersList.append(card);
+      });
+    }
+
+    function showFieldError(input, errorId, message) {
+      const error = document.querySelector(`#${errorId}`);
+      input.setAttribute("aria-invalid", "true");
+      error.textContent = message;
+      error.hidden = false;
+    }
+
+    function clearFieldError(input, errorId) {
+      input.removeAttribute("aria-invalid");
+      const error = document.querySelector(`#${errorId}`);
+      error.textContent = "";
+      error.hidden = true;
+    }
+
+    function clearErrors() {
+      clearFieldError(nameInput, "name-error");
+      clearFieldError(drinkSelect, "drink-error");
+      clearFieldError(quantityInput, "quantity-error");
+    }
+
+    function saveOrders() {
+      if (!storageAvailable) return false;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(orders));
+        return true;
+      } catch {
+        storageAvailable = false;
+        return false;
+      }
+    }
+
+    document.querySelectorAll(".filter-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        selectedCategory = button.dataset.category;
+        document.querySelectorAll(".filter-button").forEach((filter) => {
+          filter.setAttribute("aria-pressed", String(filter === button));
+        });
+        renderMenu();
+      });
+    });
+
+    nameInput.addEventListener("input", () => clearFieldError(nameInput, "name-error"));
+    drinkSelect.addEventListener("change", () => clearFieldError(drinkSelect, "drink-error"));
+    quantityInput.addEventListener("input", () => clearFieldError(quantityInput, "quantity-error"));
+
+    orderForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      clearErrors();
+      setMessage("");
+
+      const name = nameInput.value.trim();
+      const item = menu.find((entry) => entry.id === drinkSelect.value);
+      const quantity = quantityInput.valueAsNumber;
+      let invalidInput = null;
+
+      if (!name) {
+        showFieldError(nameInput, "name-error", "กรุณากรอกชื่อผู้สั่ง");
+        invalidInput = nameInput;
+      } else if (!item || !item.available) {
+        showFieldError(drinkSelect, "drink-error", item ? "เมนูนี้หมดแล้ว กรุณาเลือกเมนูอื่น" : "กรุณาเลือกเมนู");
+        invalidInput = drinkSelect;
+      } else if (!Number.isInteger(quantity) || quantity < 1 || quantity > 5) {
+        showFieldError(quantityInput, "quantity-error", "จำนวนต้องเป็นจำนวนเต็มตั้งแต่ 1 ถึง 5 แก้ว");
+        invalidInput = quantityInput;
+      }
+
+      if (invalidInput) {
+        setMessage("ตรวจสอบข้อมูลที่ระบุแล้วลองอีกครั้ง", "error");
+        invalidInput.focus();
+        return;
+      }
+
+      const order = {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        name,
+        drinkId: item.id,
+        quantity,
+        note: noteInput.value.trim(),
+        total: item.price * quantity,
+        createdAt: new Date().toISOString()
+      };
+      orders.unshift(order);
+      const saved = saveOrders();
+      renderOrders();
+      orderForm.reset();
+      quantityInput.value = "1";
+      setMessage(
+        saved ? `รับออเดอร์แล้ว · รวม ${formatBaht(order.total)} และบันทึกไว้ใน browser นี้` : `รับออเดอร์แล้ว · รวม ${formatBaht(order.total)} แต่บันทึกลงเครื่องไม่สำเร็จ`,
+        saved ? "success" : "notice"
+      );
+    });
+
+    populateDrinkOptions();
+    renderMenu();
+    renderOrders();
+  </script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+[    2003ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[    2096ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[    2129ms] [ERROR] Error: Route "/docs/database": Next.js encountered uncached data during prerendering.
+
+`fetch(...)` or `connection()` accessed outside of `<Suspense>` prevents the route from being prerendered, blocking the page load and leading to a slower user experience.
+
+Ways to fix this:
+  - [stream] Provide a placeholder with `<Suspense fallback={...}>` around the data access
+  - [cache] Cache the data access with `"use cache"` (does not apply to `connection()`)
+  - [block] Set `export const instant = false` to allow a blocking route
+
+Learn more: https://nextjs.org/docs/messages/blocking-prerender-dynamic
+    at DatabasePage (about://React/Server/C:%5CUsers%5C7355884%5CDesktop%5Ccoffee-corner%5Cweb%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__0j7xatk0hwpp4._.js?18:279:178)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2029:105)
+    at getOutlinedModel (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:1568:28)
+    at parseModelString (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:1688:50)
+    at reviveModel (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2634:66)
+    at reviveModel (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2637:61)
+    at reviveModel (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2716:112)
+    at parseModel (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2629:16)
+    at initializeModelChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:1141:25)
+    at resolveModelChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:1039:43)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2585:371)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2507:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2614:221)
+    at progress (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js:2801:13) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[    2362ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[    2999ms] [LOG] [Fast Refresh] done in 740ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20059ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20359ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20449ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20532ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20632ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20734ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20848ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   20966ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21050ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21148ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21233ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21317ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21412ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21497ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21583ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21682ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21800ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   21901ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   22129ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   26212ms] [LOG] [Fast Refresh] done in 4169ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   26270ms] [LOG] [Fast Refresh] done in 4169ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   26479ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   26584ms] [LOG] [Fast Refresh] done in 210ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   26814ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   27099ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   52316ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   68171ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   68578ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   68856ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   69093ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   69124ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   69289ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   69345ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   69544ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   69591ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   69802ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   69803ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   70057ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   70058ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   70236ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   70317ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   70452ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   70496ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   70652ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   70680ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   70807ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   70880ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   71006ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   71047ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   71252ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   71253ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   71502ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   71514ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   71773ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   72090ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   72337ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   72363ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   72485ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   72596ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   72605ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   72736ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   72829ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   72980ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   73001ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   73126ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   73228ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   73370ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   73399ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   73519ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   73629ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   73970ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   74308ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   74316ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   74558ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   74627ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   74836ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036
+[   74848ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   75097ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:760
+[   75125ms] [ERROR] ./app/docs/database/MermaidDiagram.tsx:12:5
+Error: Module not found: Can't resolve 'mermaid'
+  10 |   useEffect(() => {
+  11 |     let active = true;
+> 12 |     import("mermaid").then(async ({ default: mermaid }) => {
+     |     ^^^^^^^^^^^^^^^^^
+  13 |       mermaid.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral" });
+  14 |       const result = await mermaid.render(id, chart);
+  15 |       if (active) setSvg(result.svg);
+
+Import trace:
+  Server Component:
+    ./app/docs/database/MermaidDiagram.tsx
+    ./app/docs/database/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1036

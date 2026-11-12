@@ -1,0 +1,72 @@
+- generic:
+  - generic [active]:
+    - generic [ref=f1e3]:
+      - generic [ref=f1e4]:
+        - navigation [ref=f1e6]:
+          - button [disabled] [ref=f1e7]:
+            - img "previous" [ref=f1e8]
+          - generic [ref=f1e10]:
+            - generic [ref=f1e11]: 1/
+            - generic [ref=f1e12]: "1"
+          - button [disabled] [ref=f1e13]:
+            - img "next" [ref=f1e14]
+        - generic [ref=f1e17]:
+          - generic "Latest available version is detected (16.4.6)." [ref=f1e20]: Next.js 16.4.6
+          - generic [ref=f1e21]: Turbopack
+      - dialog "Build Error" [ref=f1e23]:
+        - generic [ref=f1e26]:
+          - generic [ref=f1e28]:
+            - generic [ref=f1e29]:
+              - generic [ref=f1e30]: Build Error
+              - generic [ref=f1e32]:
+                - button "Copy Error Info" [ref=f1e33] [cursor=pointer]
+                - link "Go to related documentation" [ref=f1e36] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/messages/module-not-found
+                - button "Attach Node.js inspector" [ref=f1e39] [cursor=pointer]
+            - generic [ref=f1e48]: "Module not found: Can't resolve 'mermaid'"
+          - generic [ref=f1e51]:
+            - generic [ref=f1e53]:
+              - generic [ref=f1e58]: ./app/docs/database/MermaidDiagram.tsx (12:5)
+              - button "Open in editor" [ref=f1e59] [cursor=pointer]
+            - generic [ref=f1e64]:
+              - generic [ref=f1e65]: "Error: Module not found: Can't resolve 'mermaid'"
+              - generic [ref=f1e66]: 10 |
+              - generic [ref=f1e67]: "useEffect(() => {"
+              - generic [ref=f1e68]: 11 |
+              - text: let
+              - generic [ref=f1e69]: active =
+              - text: "true"
+              - generic [ref=f1e70]: ;
+              - text: ">"
+              - generic [ref=f1e71]: 12 |
+              - text: import("mermaid").then(async
+              - generic [ref=f1e72]: "({"
+              - text: default
+              - generic [ref=f1e73]: ": mermaid }) => {"
+              - generic [ref=f1e74]: "|"
+              - text: ^^^^^^^^^^^^^^^^^
+              - generic [ref=f1e75]: 13 |
+              - generic [ref=f1e76]: "mermaid.initialize({ startOnLoad:"
+              - text: "false"
+              - generic [ref=f1e77]: ", securityLevel:"
+              - text: "\"strict\""
+              - generic [ref=f1e78]: ", theme:"
+              - text: "\"neutral\""
+              - generic [ref=f1e79]: "});"
+              - generic [ref=f1e80]: 14 |
+              - text: const
+              - generic [ref=f1e81]: result =
+              - text: await
+              - generic [ref=f1e82]: mermaid.render(id, chart);
+              - generic [ref=f1e83]: 15 |
+              - text: if
+              - generic [ref=f1e84]:
+                - text: "(active) setSvg(result.svg); Import trace: Server Component: ./app/docs/database/MermaidDiagram.tsx ./app/docs/database/page.tsx"
+                - link "https://nextjs.org/docs/messages/module-not-found" [ref=f1e85] [cursor=pointer]:
+                  - /url: https://nextjs.org/docs/messages/module-not-found
+    - button "Open issues overlay" [ref=f1e92] [cursor=pointer]:
+      - generic [ref=f1e96]:
+        - generic [aria-hidden] [ref=f1e97]: "0"
+        - generic [ref=f1e98]: "1"
+      - generic [ref=f1e99]: Issue
+  - alert [ref=f1e100]

@@ -1,0 +1,206 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Coffee Corner หน้าแรก" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=e5]: ☕
+        - generic [ref=e6]:
+          - generic [ref=e7]: coffee corner
+          - generic [ref=e8]: YOUR DAILY CUP
+      - navigation "เมนูหลัก" [ref=e9]:
+        - link "เมนูเครื่องดื่ม" [ref=e10] [cursor=pointer]:
+          - /url: /#menu
+        - link "ออเดอร์ล่าสุด" [ref=e11] [cursor=pointer]:
+          - /url: /#orders
+        - link "ประวัติออเดอร์" [ref=e12] [cursor=pointer]:
+          - /url: /orders
+        - link "Design System" [ref=e13] [cursor=pointer]:
+          - /url: /design
+        - link "Database Doc" [ref=e14] [cursor=pointer]:
+          - /url: /docs/database
+      - link "สั่งล่วงหน้า" [ref=e15] [cursor=pointer]:
+        - /url: /#order-form
+        - text: สั่งล่วงหน้า
+        - generic [aria-hidden] [ref=e16]: ↗
+  - main [ref=e17]:
+    - article [ref=e18]:
+      - paragraph [ref=e19]: COFFEE CORNER / DATA REFERENCE
+      - heading "Database schema — Coffee Corner" [level=1] [ref=e20]
+      - paragraph [ref=e21]:
+        - text: อ้างอิงจาก
+        - code [ref=e22]: data/schema.sql
+        - text: (อยู่ที่
+        - code [ref=e23]: ../data/schema.sql
+        - text: เมื่อเทียบกับโฟลเดอร์
+        - code [ref=e24]: web/
+        - text: ) ในรูปแบบ SQLite หน้าเว็บอ่านเมนูและบันทึกออเดอร์ใน
+        - code [ref=e25]: data/coffee.db
+        - text: ตามโครงสร้างนี้
+      - heading "ER diagram" [level=2] [ref=e26]
+      - img "ER diagram แสดงความสัมพันธ์ของ categories, menu_items และ orders" [ref=e28]:
+        - paragraph [ref=e29]: กำลังวาดแผนผังฐานข้อมูล…
+      - paragraph [ref=e30]:
+        - code [ref=e31]: "||--o{"
+        - text: หมายถึงรายการฝั่งซ้ายหนึ่งรายการเชื่อมกับรายการฝั่งขวาได้ศูนย์รายการขึ้นไป โดยแต่ละรายการฝั่งขวาต้องเชื่อมกับฝั่งซ้ายหนึ่งรายการ
+      - heading "คอลัมน์ของแต่ละตาราง" [level=2] [ref=e32]
+      - heading [level=3] [ref=e33]:
+        - code [ref=e34]: categories
+        - text: — หมวดเครื่องดื่ม
+      - table [ref=e35]:
+        - rowgroup [ref=e36]:
+          - row [ref=e37]:
+            - columnheader "ชื่อ" [ref=e38]
+            - columnheader "ชนิดข้อมูล" [ref=e39]
+            - columnheader "คำอธิบาย" [ref=e40]
+        - rowgroup [ref=e41]:
+          - row [ref=e42]:
+            - cell [ref=e43]:
+              - code [ref=e44]: id
+            - cell [ref=e45]:
+              - code [ref=e46]: INTEGER
+            - cell "รหัสหมวด (PK)" [ref=e47]
+          - row [ref=e48]:
+            - cell [ref=e49]:
+              - code [ref=e50]: name
+            - cell [ref=e51]:
+              - code [ref=e52]: TEXT
+            - cell [ref=e53]:
+              - text: ชื่อหมวด ห้ามว่าง และไม่ซ้ำโดยไม่แยกตัวพิมพ์ใหญ่/เล็ก (
+              - code [ref=e54]: COLLATE NOCASE UNIQUE
+              - text: ); ถูกอ้างอิงโดย
+              - code [ref=e55]: menu_items.category
+          - row [ref=e56]:
+            - cell [ref=e57]:
+              - code [ref=e58]: description
+            - cell [ref=e59]:
+              - code [ref=e60]: TEXT
+            - cell [ref=e61]:
+              - text: คำอธิบายหมวด; เว้นว่าง (
+              - code [ref=e62]: "NULL"
+              - text: ) ได้
+          - row [ref=e63]:
+            - cell [ref=e64]:
+              - code [ref=e65]: sort_order
+            - cell [ref=e66]:
+              - code [ref=e67]: INTEGER
+            - cell "ลำดับการแสดงหมวด ห้ามว่าง" [ref=e68]
+      - heading [level=3] [ref=e69]:
+        - code [ref=e70]: menu_items
+        - text: — รายการเครื่องดื่ม
+      - table [ref=e71]:
+        - rowgroup [ref=e72]:
+          - row [ref=e73]:
+            - columnheader "ชื่อ" [ref=e74]
+            - columnheader "ชนิดข้อมูล" [ref=e75]
+            - columnheader "คำอธิบาย" [ref=e76]
+        - rowgroup [ref=e77]:
+          - row [ref=e78]:
+            - cell [ref=e79]:
+              - code [ref=e80]: id
+            - cell [ref=e81]:
+              - code [ref=e82]: INTEGER
+            - cell "รหัสเมนู (PK)" [ref=e83]
+          - row [ref=e84]:
+            - cell [ref=e85]:
+              - code [ref=e86]: name
+            - cell [ref=e87]:
+              - code [ref=e88]: TEXT
+            - cell [ref=e89]:
+              - text: ชื่อเมนู ห้ามว่าง และไม่ซ้ำโดยไม่แยกตัวพิมพ์ใหญ่/เล็ก (
+              - code [ref=e90]: COLLATE NOCASE UNIQUE
+              - text: )
+          - row [ref=e91]:
+            - cell [ref=e92]:
+              - code [ref=e93]: category
+            - cell [ref=e94]:
+              - code [ref=e95]: TEXT
+            - cell [ref=e96]:
+              - text: ชื่อหมวด (FK →
+              - code [ref=e97]: categories.name
+              - text: ) ห้ามว่าง; ถ้าเปลี่ยนชื่อหมวดจะอัปเดตตาม และลบหมวดที่ยังถูกใช้งานไม่ได้
+          - row [ref=e98]:
+            - cell [ref=e99]:
+              - code [ref=e100]: price
+            - cell [ref=e101]:
+              - code [ref=e102]: REAL
+            - cell "ราคา ต้องมากกว่า 0 และห้ามว่าง" [ref=e103]
+          - row [ref=e104]:
+            - cell [ref=e105]:
+              - code [ref=e106]: is_available
+            - cell [ref=e107]:
+              - code [ref=e108]: INTEGER
+            - cell [ref=e109]:
+              - text: "สถานะขาย:"
+              - code [ref=e110]: "1"
+              - text: = มีขาย,
+              - code [ref=e111]: "0"
+              - text: = หมด/ไม่เปิดขาย; รับเฉพาะ 0 หรือ 1 และห้ามว่าง
+      - heading [level=3] [ref=e112]:
+        - code [ref=e113]: orders
+        - text: — ออเดอร์
+      - table [ref=e114]:
+        - rowgroup [ref=e115]:
+          - row [ref=e116]:
+            - columnheader "ชื่อ" [ref=e117]
+            - columnheader "ชนิดข้อมูล" [ref=e118]
+            - columnheader "คำอธิบาย" [ref=e119]
+        - rowgroup [ref=e120]:
+          - row [ref=e121]:
+            - cell [ref=e122]:
+              - code [ref=e123]: id
+            - cell [ref=e124]:
+              - code [ref=e125]: INTEGER
+            - cell "รหัสออเดอร์ (PK)" [ref=e126]
+          - row [ref=e127]:
+            - cell [ref=e128]:
+              - code [ref=e129]: customer_name
+            - cell [ref=e130]:
+              - code [ref=e131]: TEXT
+            - cell "ชื่อผู้สั่ง ห้ามว่าง" [ref=e132]
+          - row [ref=e133]:
+            - cell [ref=e134]:
+              - code [ref=e135]: menu_item_id
+            - cell [ref=e136]:
+              - code [ref=e137]: INTEGER
+            - cell [ref=e138]:
+              - text: รหัสเมนูที่สั่ง (FK →
+              - code [ref=e139]: menu_items.id
+              - text: ) ห้ามว่าง; ถ้ารหัสเมนูเปลี่ยนจะอัปเดตตาม และลบเมนูที่มีออเดอร์ไม่ได้
+          - row [ref=e140]:
+            - cell [ref=e141]:
+              - code [ref=e142]: quantity
+            - cell [ref=e143]:
+              - code [ref=e144]: INTEGER
+            - cell "จำนวนแก้ว ตั้งแต่ 1 ถึง 5 และห้ามว่าง" [ref=e145]
+          - row [ref=e146]:
+            - cell [ref=e147]:
+              - code [ref=e148]: note
+            - cell [ref=e149]:
+              - code [ref=e150]: TEXT
+            - cell [ref=e151]:
+              - text: หมายเหตุเพิ่มเติม; เว้นว่าง (
+              - code [ref=e152]: "NULL"
+              - text: ) ได้
+          - row [ref=e153]:
+            - cell [ref=e154]:
+              - code [ref=e155]: created_at
+            - cell [ref=e156]:
+              - code [ref=e157]: TEXT
+            - cell "เวลาที่สร้างออเดอร์ในรูปข้อความ ห้ามว่าง; schema ไม่กำหนดรูปแบบหรือค่าเริ่มต้น" [ref=e158]
+      - heading "ความสัมพันธ์แบบเข้าใจง่าย" [level=2] [ref=e159]
+      - list [ref=e160]:
+        - listitem [ref=e161]: หมวดหนึ่งมีเครื่องดื่มได้หลายเมนู (หรือยังไม่มีเลย) แต่ทุกเมนูต้องอยู่ในหมวดหนึ่ง โดยอ้างชื่อหมวด ไม่ใช่รหัสหมวด
+        - listitem [ref=e162]: เครื่องดื่มหนึ่งเมนูถูกสั่งได้หลายออเดอร์ (หรือยังไม่ถูกสั่ง) แต่ออเดอร์แต่ละรายการอ้างถึงเมนูเดียวและเก็บจำนวนแก้วไว้ในรายการนั้น
+        - listitem [ref=e163]:
+          - text: เปลี่ยนค่าคีย์ที่ถูกอ้างอิงแล้ว FK จะเปลี่ยนตาม (
+          - code [ref=e164]: ON UPDATE CASCADE
+          - text: ); ลบหมวดหรือเมนูที่ยังมีรายการลูกไม่ได้ (
+          - code [ref=e165]: ON DELETE RESTRICT
+          - text: )
+        - listitem [ref=e166]:
+          - text: ทุกตารางเป็น SQLite
+          - code [ref=e167]: STRICT
+          - text: และ
+          - code [ref=e168]: PRAGMA foreign_keys = ON
+          - text: เปิดการตรวจ FK ในสคริปต์ schema
+  - alert [ref=e169]

@@ -1,0 +1,667 @@
+- generic [active] [ref=f24e1]:
+  - banner [ref=f24e2]:
+    - generic [ref=f24e3]:
+      - link "Coffee Corner หน้าแรก" [ref=f24e4] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=f24e5]: ☕
+        - generic [ref=f24e6]:
+          - generic [ref=f24e7]: coffee corner
+          - generic [ref=f24e8]: YOUR DAILY CUP
+      - navigation "เมนูหลัก" [ref=f24e9]:
+        - link "เมนูเครื่องดื่ม" [ref=f24e10] [cursor=pointer]:
+          - /url: /#menu
+        - link "ออเดอร์ล่าสุด" [ref=f24e11] [cursor=pointer]:
+          - /url: /#orders
+        - link "Design System" [ref=f24e12] [cursor=pointer]:
+          - /url: /design
+      - link "สั่งล่วงหน้า" [ref=f24e13] [cursor=pointer]:
+        - /url: /#order-form
+        - text: สั่งล่วงหน้า
+        - generic [aria-hidden] [ref=f24e14]: ↗
+  - main [ref=f24e15]:
+    - generic [ref=f24e16]:
+      - generic [ref=f24e17]:
+        - paragraph [ref=f24e18]: COFFEE CORNER / DESIGN LANGUAGE 01
+        - heading "Artisanal Thai Roast" [level=1] [ref=f24e19]
+        - paragraph [ref=f24e20]: ระบบภาพลักษณ์ที่ถ่ายทอดความหอมอุ่นของกาแฟไทยผ่านสีคั่วเข้ม พื้นกระดาษนุ่ม และตัวอักษรที่อ่านง่ายทั้งไทยและอังกฤษ
+        - generic [ref=f24e21]:
+          - generic [ref=f24e22]: 56 COLOR TOKENS
+          - generic [ref=f24e23]: 11 TYPE STYLES
+          - generic [ref=f24e24]: ONE DAILY RITUAL ✳
+      - generic [aria-hidden]: ☕
+    - navigation "สารบัญ Design System" [ref=f24e25]:
+      - link "01 / สี" [ref=f24e26] [cursor=pointer]:
+        - /url: "#palette"
+      - link "02 / ตัวอักษร" [ref=f24e27] [cursor=pointer]:
+        - /url: "#typography"
+      - link "03 / ระยะและมุม" [ref=f24e28] [cursor=pointer]:
+        - /url: "#geometry"
+      - link "04 / คอมโพเนนต์" [ref=f24e29] [cursor=pointer]:
+        - /url: "#components"
+    - region [ref=f24e30]:
+      - generic [ref=f24e31]:
+        - generic [ref=f24e32]:
+          - paragraph [ref=f24e33]: 01 / DESIGN TOKENS
+          - heading "Color palette / ชุดสี" [level=2] [ref=f24e34]
+          - paragraph [ref=f24e35]: สีทั้งหมดอ่านจาก DESIGN.md โดยตรง ชื่อ token ใช้ร่วมกับ Tailwind theme ในหน้าเว็บจริง
+        - generic [ref=f24e36]: COFFEE CORNER ✳
+      - generic [ref=f24e37]:
+        - generic [ref=f24e38]:
+          - generic [ref=f24e39]:
+            - heading "01 — Canvas & surfaces" [level=3] [ref=f24e40]
+            - generic [ref=f24e41]: พื้นผิว หมึก และเส้นขอบ · 22 สี
+          - generic [ref=f24e42]:
+            - 'figure "--color-surface #fcf9f2" [ref=f24e43]':
+              - 'img "สี #fcf9f2" [ref=f24e44]'
+              - generic [ref=f24e45]:
+                - generic [ref=f24e46]: "--color-surface"
+                - generic [ref=f24e47]: "#fcf9f2"
+            - 'figure "--color-surface-dim #dcdad3" [ref=f24e48]':
+              - 'img "สี #dcdad3" [ref=f24e49]'
+              - generic [ref=f24e50]:
+                - generic [ref=f24e51]: "--color-surface-dim"
+                - generic [ref=f24e52]: "#dcdad3"
+            - 'figure "--color-surface-bright #fcf9f2" [ref=f24e53]':
+              - 'img "สี #fcf9f2" [ref=f24e54]'
+              - generic [ref=f24e55]:
+                - generic [ref=f24e56]: "--color-surface-bright"
+                - generic [ref=f24e57]: "#fcf9f2"
+            - 'figure "--color-surface-container-lowest #ffffff" [ref=f24e58]':
+              - 'img "สี #ffffff" [ref=f24e59]'
+              - generic [ref=f24e60]:
+                - generic [ref=f24e61]: "--color-surface-container-lowest"
+                - generic [ref=f24e62]: "#ffffff"
+            - 'figure "--color-surface-container-low #f6f3ec" [ref=f24e63]':
+              - 'img "สี #f6f3ec" [ref=f24e64]'
+              - generic [ref=f24e65]:
+                - generic [ref=f24e66]: "--color-surface-container-low"
+                - generic [ref=f24e67]: "#f6f3ec"
+            - 'figure "--color-surface-container #f1eee7" [ref=f24e68]':
+              - 'img "สี #f1eee7" [ref=f24e69]'
+              - generic [ref=f24e70]:
+                - generic [ref=f24e71]: "--color-surface-container"
+                - generic [ref=f24e72]: "#f1eee7"
+            - 'figure "--color-surface-container-high #ebe8e1" [ref=f24e73]':
+              - 'img "สี #ebe8e1" [ref=f24e74]'
+              - generic [ref=f24e75]:
+                - generic [ref=f24e76]: "--color-surface-container-high"
+                - generic [ref=f24e77]: "#ebe8e1"
+            - 'figure "--color-surface-container-highest #e5e2db" [ref=f24e78]':
+              - 'img "สี #e5e2db" [ref=f24e79]'
+              - generic [ref=f24e80]:
+                - generic [ref=f24e81]: "--color-surface-container-highest"
+                - generic [ref=f24e82]: "#e5e2db"
+            - 'figure "--color-on-surface #1c1c18" [ref=f24e83]':
+              - 'img "สี #1c1c18" [ref=f24e84]'
+              - generic [ref=f24e85]:
+                - generic [ref=f24e86]: "--color-on-surface"
+                - generic [ref=f24e87]: "#1c1c18"
+            - 'figure "--color-on-surface-variant #4f453f" [ref=f24e88]':
+              - 'img "สี #4f453f" [ref=f24e89]'
+              - generic [ref=f24e90]:
+                - generic [ref=f24e91]: "--color-on-surface-variant"
+                - generic [ref=f24e92]: "#4f453f"
+            - 'figure "--color-inverse-surface #31312c" [ref=f24e93]':
+              - 'img "สี #31312c" [ref=f24e94]'
+              - generic [ref=f24e95]:
+                - generic [ref=f24e96]: "--color-inverse-surface"
+                - generic [ref=f24e97]: "#31312c"
+            - 'figure "--color-inverse-on-surface #f3f0e9" [ref=f24e98]':
+              - 'img "สี #f3f0e9" [ref=f24e99]'
+              - generic [ref=f24e100]:
+                - generic [ref=f24e101]: "--color-inverse-on-surface"
+                - generic [ref=f24e102]: "#f3f0e9"
+            - 'figure "--color-outline #81746e" [ref=f24e103]':
+              - 'img "สี #81746e" [ref=f24e104]'
+              - generic [ref=f24e105]:
+                - generic [ref=f24e106]: "--color-outline"
+                - generic [ref=f24e107]: "#81746e"
+            - 'figure "--color-outline-variant #d3c3bc" [ref=f24e108]':
+              - 'img "สี #d3c3bc" [ref=f24e109]'
+              - generic [ref=f24e110]:
+                - generic [ref=f24e111]: "--color-outline-variant"
+                - generic [ref=f24e112]: "#d3c3bc"
+            - 'figure "--color-surface-tint #74584a" [ref=f24e113]':
+              - 'img "สี #74584a" [ref=f24e114]'
+              - generic [ref=f24e115]:
+                - generic [ref=f24e116]: "--color-surface-tint"
+                - generic [ref=f24e117]: "#74584a"
+            - 'figure "--color-background #fcf9f2" [ref=f24e118]':
+              - 'img "สี #fcf9f2" [ref=f24e119]'
+              - generic [ref=f24e120]:
+                - generic [ref=f24e121]: "--color-background"
+                - generic [ref=f24e122]: "#fcf9f2"
+            - 'figure "--color-on-background #1c1c18" [ref=f24e123]':
+              - 'img "สี #1c1c18" [ref=f24e124]'
+              - generic [ref=f24e125]:
+                - generic [ref=f24e126]: "--color-on-background"
+                - generic [ref=f24e127]: "#1c1c18"
+            - 'figure "--color-surface-variant #e5e2db" [ref=f24e128]':
+              - 'img "สี #e5e2db" [ref=f24e129]'
+              - generic [ref=f24e130]:
+                - generic [ref=f24e131]: "--color-surface-variant"
+                - generic [ref=f24e132]: "#e5e2db"
+            - 'figure "--color-ink #302820" [ref=f24e133]':
+              - 'img "สี #302820" [ref=f24e134]'
+              - generic [ref=f24e135]:
+                - generic [ref=f24e136]: "--color-ink"
+                - generic [ref=f24e137]: "#302820"
+            - 'figure "--color-muted #82786c" [ref=f24e138]':
+              - 'img "สี #82786c" [ref=f24e139]'
+              - generic [ref=f24e140]:
+                - generic [ref=f24e141]: "--color-muted"
+                - generic [ref=f24e142]: "#82786c"
+            - 'figure "--color-paper #fffefa" [ref=f24e143]':
+              - 'img "สี #fffefa" [ref=f24e144]'
+              - generic [ref=f24e145]:
+                - generic [ref=f24e146]: "--color-paper"
+                - generic [ref=f24e147]: "#fffefa"
+            - 'figure "--color-line #e9e3d9" [ref=f24e148]':
+              - 'img "สี #e9e3d9" [ref=f24e149]'
+              - generic [ref=f24e150]:
+                - generic [ref=f24e151]: "--color-line"
+                - generic [ref=f24e152]: "#e9e3d9"
+        - generic [ref=f24e153]:
+          - generic [ref=f24e154]:
+            - heading "02 — Roast & caramel" [level=3] [ref=f24e155]
+            - generic [ref=f24e156]: น้ำหนักของกาแฟและความอบอุ่นของคาราเมล · 19 สี
+          - generic [ref=f24e157]:
+            - 'figure "--color-primary #3a2519" [ref=f24e158]':
+              - 'img "สี #3a2519" [ref=f24e159]'
+              - generic [ref=f24e160]:
+                - generic [ref=f24e161]: "--color-primary"
+                - generic [ref=f24e162]: "#3a2519"
+            - 'figure "--color-on-primary #ffffff" [ref=f24e163]':
+              - 'img "สี #ffffff" [ref=f24e164]'
+              - generic [ref=f24e165]:
+                - generic [ref=f24e166]: "--color-on-primary"
+                - generic [ref=f24e167]: "#ffffff"
+            - 'figure "--color-primary-container #523a2d" [ref=f24e168]':
+              - 'img "สี #523a2d" [ref=f24e169]'
+              - generic [ref=f24e170]:
+                - generic [ref=f24e171]: "--color-primary-container"
+                - generic [ref=f24e172]: "#523a2d"
+            - 'figure "--color-on-primary-container #c6a493" [ref=f24e173]':
+              - 'img "สี #c6a493" [ref=f24e174]'
+              - generic [ref=f24e175]:
+                - generic [ref=f24e176]: "--color-on-primary-container"
+                - generic [ref=f24e177]: "#c6a493"
+            - 'figure "--color-inverse-primary #e3bfad" [ref=f24e178]':
+              - 'img "สี #e3bfad" [ref=f24e179]'
+              - generic [ref=f24e180]:
+                - generic [ref=f24e181]: "--color-inverse-primary"
+                - generic [ref=f24e182]: "#e3bfad"
+            - 'figure "--color-secondary #885122" [ref=f24e183]':
+              - 'img "สี #885122" [ref=f24e184]'
+              - generic [ref=f24e185]:
+                - generic [ref=f24e186]: "--color-secondary"
+                - generic [ref=f24e187]: "#885122"
+            - 'figure "--color-on-secondary #ffffff" [ref=f24e188]':
+              - 'img "สี #ffffff" [ref=f24e189]'
+              - generic [ref=f24e190]:
+                - generic [ref=f24e191]: "--color-on-secondary"
+                - generic [ref=f24e192]: "#ffffff"
+            - 'figure "--color-secondary-container #ffb77f" [ref=f24e193]':
+              - 'img "สี #ffb77f" [ref=f24e194]'
+              - generic [ref=f24e195]:
+                - generic [ref=f24e196]: "--color-secondary-container"
+                - generic [ref=f24e197]: "#ffb77f"
+            - 'figure "--color-on-secondary-container #7a4617" [ref=f24e198]':
+              - 'img "สี #7a4617" [ref=f24e199]'
+              - generic [ref=f24e200]:
+                - generic [ref=f24e201]: "--color-on-secondary-container"
+                - generic [ref=f24e202]: "#7a4617"
+            - 'figure "--color-primary-fixed #ffdbca" [ref=f24e203]':
+              - 'img "สี #ffdbca" [ref=f24e204]'
+              - generic [ref=f24e205]:
+                - generic [ref=f24e206]: "--color-primary-fixed"
+                - generic [ref=f24e207]: "#ffdbca"
+            - 'figure "--color-primary-fixed-dim #e3bfad" [ref=f24e208]':
+              - 'img "สี #e3bfad" [ref=f24e209]'
+              - generic [ref=f24e210]:
+                - generic [ref=f24e211]: "--color-primary-fixed-dim"
+                - generic [ref=f24e212]: "#e3bfad"
+            - 'figure "--color-on-primary-fixed #2a170c" [ref=f24e213]':
+              - 'img "สี #2a170c" [ref=f24e214]'
+              - generic [ref=f24e215]:
+                - generic [ref=f24e216]: "--color-on-primary-fixed"
+                - generic [ref=f24e217]: "#2a170c"
+            - 'figure "--color-on-primary-fixed-variant #5a4134" [ref=f24e218]':
+              - 'img "สี #5a4134" [ref=f24e219]'
+              - generic [ref=f24e220]:
+                - generic [ref=f24e221]: "--color-on-primary-fixed-variant"
+                - generic [ref=f24e222]: "#5a4134"
+            - 'figure "--color-secondary-fixed #ffdcc4" [ref=f24e223]':
+              - 'img "สี #ffdcc4" [ref=f24e224]'
+              - generic [ref=f24e225]:
+                - generic [ref=f24e226]: "--color-secondary-fixed"
+                - generic [ref=f24e227]: "#ffdcc4"
+            - 'figure "--color-secondary-fixed-dim #ffb77f" [ref=f24e228]':
+              - 'img "สี #ffb77f" [ref=f24e229]'
+              - generic [ref=f24e230]:
+                - generic [ref=f24e231]: "--color-secondary-fixed-dim"
+                - generic [ref=f24e232]: "#ffb77f"
+            - 'figure "--color-on-secondary-fixed #2f1500" [ref=f24e233]':
+              - 'img "สี #2f1500" [ref=f24e234]'
+              - generic [ref=f24e235]:
+                - generic [ref=f24e236]: "--color-on-secondary-fixed"
+                - generic [ref=f24e237]: "#2f1500"
+            - 'figure "--color-on-secondary-fixed-variant #6b3a0c" [ref=f24e238]':
+              - 'img "สี #6b3a0c" [ref=f24e239]'
+              - generic [ref=f24e240]:
+                - generic [ref=f24e241]: "--color-on-secondary-fixed-variant"
+                - generic [ref=f24e242]: "#6b3a0c"
+            - 'figure "--color-coffee-dark #38271f" [ref=f24e243]':
+              - 'img "สี #38271f" [ref=f24e244]'
+              - generic [ref=f24e245]:
+                - generic [ref=f24e246]: "--color-coffee-dark"
+                - generic [ref=f24e247]: "#38271f"
+            - 'figure "--color-toasted-gold #d9a76f" [ref=f24e248]':
+              - 'img "สี #d9a76f" [ref=f24e249]'
+              - generic [ref=f24e250]:
+                - generic [ref=f24e251]: "--color-toasted-gold"
+                - generic [ref=f24e252]: "#d9a76f"
+        - generic [ref=f24e253]:
+          - generic [ref=f24e254]:
+            - heading "03 — Botanical & feedback" [level=3] [ref=f24e255]
+            - generic [ref=f24e256]: สีสมุนไพร สถานะสำเร็จ และข้อผิดพลาด · 15 สี
+          - generic [ref=f24e257]:
+            - 'figure "--color-tertiary #1f2e1b" [ref=f24e258]':
+              - 'img "สี #1f2e1b" [ref=f24e259]'
+              - generic [ref=f24e260]:
+                - generic [ref=f24e261]: "--color-tertiary"
+                - generic [ref=f24e262]: "#1f2e1b"
+            - 'figure "--color-on-tertiary #ffffff" [ref=f24e263]':
+              - 'img "สี #ffffff" [ref=f24e264]'
+              - generic [ref=f24e265]:
+                - generic [ref=f24e266]: "--color-on-tertiary"
+                - generic [ref=f24e267]: "#ffffff"
+            - 'figure "--color-tertiary-container #344430" [ref=f24e268]':
+              - 'img "สี #344430" [ref=f24e269]'
+              - generic [ref=f24e270]:
+                - generic [ref=f24e271]: "--color-tertiary-container"
+                - generic [ref=f24e272]: "#344430"
+            - 'figure "--color-on-tertiary-container #9fb197" [ref=f24e273]':
+              - 'img "สี #9fb197" [ref=f24e274]'
+              - generic [ref=f24e275]:
+                - generic [ref=f24e276]: "--color-on-tertiary-container"
+                - generic [ref=f24e277]: "#9fb197"
+            - 'figure "--color-error #ba1a1a" [ref=f24e278]':
+              - 'img "สี #ba1a1a" [ref=f24e279]'
+              - generic [ref=f24e280]:
+                - generic [ref=f24e281]: "--color-error"
+                - generic [ref=f24e282]: "#ba1a1a"
+            - 'figure "--color-on-error #ffffff" [ref=f24e283]':
+              - 'img "สี #ffffff" [ref=f24e284]'
+              - generic [ref=f24e285]:
+                - generic [ref=f24e286]: "--color-on-error"
+                - generic [ref=f24e287]: "#ffffff"
+            - 'figure "--color-error-container #ffdad6" [ref=f24e288]':
+              - 'img "สี #ffdad6" [ref=f24e289]'
+              - generic [ref=f24e290]:
+                - generic [ref=f24e291]: "--color-error-container"
+                - generic [ref=f24e292]: "#ffdad6"
+            - 'figure "--color-on-error-container #93000a" [ref=f24e293]':
+              - 'img "สี #93000a" [ref=f24e294]'
+              - generic [ref=f24e295]:
+                - generic [ref=f24e296]: "--color-on-error-container"
+                - generic [ref=f24e297]: "#93000a"
+            - 'figure "--color-tertiary-fixed #d5e8cc" [ref=f24e298]':
+              - 'img "สี #d5e8cc" [ref=f24e299]'
+              - generic [ref=f24e300]:
+                - generic [ref=f24e301]: "--color-tertiary-fixed"
+                - generic [ref=f24e302]: "#d5e8cc"
+            - 'figure "--color-tertiary-fixed-dim #b9ccb1" [ref=f24e303]':
+              - 'img "สี #b9ccb1" [ref=f24e304]'
+              - generic [ref=f24e305]:
+                - generic [ref=f24e306]: "--color-tertiary-fixed-dim"
+                - generic [ref=f24e307]: "#b9ccb1"
+            - 'figure "--color-on-tertiary-fixed #111f0e" [ref=f24e308]':
+              - 'img "สี #111f0e" [ref=f24e309]'
+              - generic [ref=f24e310]:
+                - generic [ref=f24e311]: "--color-on-tertiary-fixed"
+                - generic [ref=f24e312]: "#111f0e"
+            - 'figure "--color-on-tertiary-fixed-variant #3b4b36" [ref=f24e313]':
+              - 'img "สี #3b4b36" [ref=f24e314]'
+              - generic [ref=f24e315]:
+                - generic [ref=f24e316]: "--color-on-tertiary-fixed-variant"
+                - generic [ref=f24e317]: "#3b4b36"
+            - 'figure "--color-sage-light #edf1e9" [ref=f24e318]':
+              - 'img "สี #edf1e9" [ref=f24e319]'
+              - generic [ref=f24e320]:
+                - generic [ref=f24e321]: "--color-sage-light"
+                - generic [ref=f24e322]: "#edf1e9"
+            - 'figure "--color-danger #a84c3d" [ref=f24e323]':
+              - 'img "สี #a84c3d" [ref=f24e324]'
+              - generic [ref=f24e325]:
+                - generic [ref=f24e326]: "--color-danger"
+                - generic [ref=f24e327]: "#a84c3d"
+            - 'figure "--color-danger-surface #fbefeb" [ref=f24e328]':
+              - 'img "สี #fbefeb" [ref=f24e329]'
+              - generic [ref=f24e330]:
+                - generic [ref=f24e331]: "--color-danger-surface"
+                - generic [ref=f24e332]: "#fbefeb"
+    - region [ref=f24e333]:
+      - generic [ref=f24e334]:
+        - generic [ref=f24e335]:
+          - paragraph [ref=f24e336]: 02 / DESIGN TOKENS
+          - heading "Typography / ตัวอักษร" [level=2] [ref=f24e337]
+          - paragraph [ref=f24e338]: IBM Plex Sans สำหรับ Latin ผสาน IBM Plex Sans Thai เพื่อให้อ่านภาษาไทยได้ชัดเจน ตัวอย่างด้านล่างแสดงครบทุกระดับ
+        - generic [ref=f24e339]: COFFEE CORNER ✳
+      - generic [ref=f24e340]:
+        - generic [ref=f24e341]:
+          - generic [ref=f24e342]:
+            - heading "text-display-hero" [level=3] [ref=f24e343]
+            - generic [ref=f24e344]: 44px · 700 · lh 1.16 · ls -0.04em
+          - generic [ref=f24e345]:
+            - generic [ref=f24e346]:
+              - generic [ref=f24e347]: TH / ภาษาไทย
+              - paragraph [ref=f24e348]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e349]:
+              - generic [ref=f24e350]: EN / ENGLISH
+              - paragraph [ref=f24e351]: Good coffee, better days.
+          - paragraph [ref=f24e352]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e353]:
+          - generic [ref=f24e354]:
+            - heading "text-display-hero-mobile" [level=3] [ref=f24e355]
+            - generic [ref=f24e356]: 32px · 700 · lh 1.2 · ls -0.03em
+          - generic [ref=f24e357]:
+            - generic [ref=f24e358]:
+              - generic [ref=f24e359]: TH / ภาษาไทย
+              - paragraph [ref=f24e360]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e361]:
+              - generic [ref=f24e362]: EN / ENGLISH
+              - paragraph [ref=f24e363]: Good coffee, better days.
+          - paragraph [ref=f24e364]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e365]:
+          - generic [ref=f24e366]:
+            - heading "text-headline-lg" [level=3] [ref=f24e367]
+            - generic [ref=f24e368]: 22px · 700 · lh 1.3 · ls -0.025em
+          - generic [ref=f24e369]:
+            - generic [ref=f24e370]:
+              - generic [ref=f24e371]: TH / ภาษาไทย
+              - paragraph [ref=f24e372]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e373]:
+              - generic [ref=f24e374]: EN / ENGLISH
+              - paragraph [ref=f24e375]: Good coffee, better days.
+          - paragraph [ref=f24e376]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e377]:
+          - generic [ref=f24e378]:
+            - heading "text-headline-sm" [level=3] [ref=f24e379]
+            - generic [ref=f24e380]: 16px · 700 · lh 1.35 · ls -0.01em
+          - generic [ref=f24e381]:
+            - generic [ref=f24e382]:
+              - generic [ref=f24e383]: TH / ภาษาไทย
+              - paragraph [ref=f24e384]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e385]:
+              - generic [ref=f24e386]: EN / ENGLISH
+              - paragraph [ref=f24e387]: Good coffee, better days.
+          - paragraph [ref=f24e388]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e389]:
+          - generic [ref=f24e390]:
+            - heading "text-body-lg" [level=3] [ref=f24e391]
+            - generic [ref=f24e392]: 15px · 400 · lh 1.7 · ls 0
+          - generic [ref=f24e393]:
+            - generic [ref=f24e394]:
+              - generic [ref=f24e395]: TH / ภาษาไทย
+              - paragraph [ref=f24e396]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e397]:
+              - generic [ref=f24e398]: EN / ENGLISH
+              - paragraph [ref=f24e399]: Good coffee, better days.
+          - paragraph [ref=f24e400]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e401]:
+          - generic [ref=f24e402]:
+            - heading "text-body-md" [level=3] [ref=f24e403]
+            - generic [ref=f24e404]: 13px · 400 · lh 1.55 · ls 0
+          - generic [ref=f24e405]:
+            - generic [ref=f24e406]:
+              - generic [ref=f24e407]: TH / ภาษาไทย
+              - paragraph [ref=f24e408]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e409]:
+              - generic [ref=f24e410]: EN / ENGLISH
+              - paragraph [ref=f24e411]: Good coffee, better days.
+          - paragraph [ref=f24e412]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e413]:
+          - generic [ref=f24e414]:
+            - heading "text-body-sm" [level=3] [ref=f24e415]
+            - generic [ref=f24e416]: 12px · 400 · lh 1.5 · ls 0
+          - generic [ref=f24e417]:
+            - generic [ref=f24e418]:
+              - generic [ref=f24e419]: TH / ภาษาไทย
+              - paragraph [ref=f24e420]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e421]:
+              - generic [ref=f24e422]: EN / ENGLISH
+              - paragraph [ref=f24e423]: Good coffee, better days.
+          - paragraph [ref=f24e424]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e425]:
+          - generic [ref=f24e426]:
+            - heading "text-label-lg" [level=3] [ref=f24e427]
+            - generic [ref=f24e428]: 13px · 700 · lh 1.2 · ls 0
+          - generic [ref=f24e429]:
+            - generic [ref=f24e430]:
+              - generic [ref=f24e431]: TH / ภาษาไทย
+              - paragraph [ref=f24e432]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e433]:
+              - generic [ref=f24e434]: EN / ENGLISH
+              - paragraph [ref=f24e435]: Good coffee, better days.
+          - paragraph [ref=f24e436]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e437]:
+          - generic [ref=f24e438]:
+            - heading "text-label-md" [level=3] [ref=f24e439]
+            - generic [ref=f24e440]: 12px · 600 · lh 1.2 · ls 0.01em
+          - generic [ref=f24e441]:
+            - generic [ref=f24e442]:
+              - generic [ref=f24e443]: TH / ภาษาไทย
+              - paragraph [ref=f24e444]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e445]:
+              - generic [ref=f24e446]: EN / ENGLISH
+              - paragraph [ref=f24e447]: Good coffee, better days.
+          - paragraph [ref=f24e448]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e449]:
+          - generic [ref=f24e450]:
+            - heading "text-label-sm" [level=3] [ref=f24e451]
+            - generic [ref=f24e452]: 11px · 600 · lh 1.2 · ls 0.04em
+          - generic [ref=f24e453]:
+            - generic [ref=f24e454]:
+              - generic [ref=f24e455]: TH / ภาษาไทย
+              - paragraph [ref=f24e456]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e457]:
+              - generic [ref=f24e458]: EN / ENGLISH
+              - paragraph [ref=f24e459]: Good coffee, better days.
+          - paragraph [ref=f24e460]: IBM Plex Sans + IBM Plex Sans Thai
+        - generic [ref=f24e461]:
+          - generic [ref=f24e462]:
+            - heading "text-label-micro" [level=3] [ref=f24e463]
+            - generic [ref=f24e464]: 10px · 700 · lh 1.1 · ls 0.08em
+          - generic [ref=f24e465]:
+            - generic [ref=f24e466]:
+              - generic [ref=f24e467]: TH / ภาษาไทย
+              - paragraph [ref=f24e468]: พักสักนิด แล้วเติมแก้วโปรด
+            - generic [ref=f24e469]:
+              - generic [ref=f24e470]: EN / ENGLISH
+              - paragraph [ref=f24e471]: Good coffee, better days.
+          - paragraph [ref=f24e472]: IBM Plex Sans + IBM Plex Sans Thai
+    - region [ref=f24e473]:
+      - generic [ref=f24e474]:
+        - generic [ref=f24e475]:
+          - paragraph [ref=f24e476]: 03 / DESIGN TOKENS
+          - heading "Spacing & shape / ระยะและมุม" [level=2] [ref=f24e477]
+          - paragraph [ref=f24e478]: สเกลระยะห่างและมุมโค้งจาก DESIGN.md เพื่อรักษาจังหวะและความนุ่มของทุกพื้นผิว
+        - generic [ref=f24e479]: COFFEE CORNER ✳
+      - generic [ref=f24e480]:
+        - generic [ref=f24e481]:
+          - heading "Spacing scale" [level=3] [ref=f24e482]
+          - generic [ref=f24e483]:
+            - generic [ref=f24e484]:
+              - generic [ref=f24e485]: gutter
+              - generic [ref=f24e487]: 1.375rem
+            - generic [ref=f24e488]:
+              - generic [ref=f24e489]: gutter-mobile
+              - generic [ref=f24e491]: 0.75rem
+            - generic [ref=f24e492]:
+              - generic [ref=f24e493]: margin
+              - generic [ref=f24e495]: 1.5rem
+            - generic [ref=f24e496]:
+              - generic [ref=f24e497]: margin-mobile
+              - generic [ref=f24e499]: 1rem
+            - generic [ref=f24e500]:
+              - generic [ref=f24e501]: space-xs
+              - generic [ref=f24e503]: 0.25rem
+            - generic [ref=f24e504]:
+              - generic [ref=f24e505]: space-sm
+              - generic [ref=f24e507]: 0.5rem
+            - generic [ref=f24e508]:
+              - generic [ref=f24e509]: space-md
+              - generic [ref=f24e511]: 0.875rem
+            - generic [ref=f24e512]:
+              - generic [ref=f24e513]: space-lg
+              - generic [ref=f24e515]: 1.375rem
+            - generic [ref=f24e516]:
+              - generic [ref=f24e517]: space-xl
+              - generic [ref=f24e519]: 1.75rem
+            - generic [ref=f24e520]:
+              - generic [ref=f24e521]: space-2xl
+              - generic [ref=f24e523]: 2.5rem
+        - generic [ref=f24e524]:
+          - heading "Corner radius" [level=3] [ref=f24e525]
+          - generic [ref=f24e526]:
+            - generic [ref=f24e529]:
+              - text: sm
+              - generic [ref=f24e530]: / 0.25rem
+            - generic [ref=f24e533]:
+              - text: DEFAULT
+              - generic [ref=f24e534]: / 0.5rem
+            - generic [ref=f24e537]:
+              - text: md
+              - generic [ref=f24e538]: / 0.75rem
+            - generic [ref=f24e541]:
+              - text: lg
+              - generic [ref=f24e542]: / 1rem
+            - generic [ref=f24e545]:
+              - text: xl
+              - generic [ref=f24e546]: / 1.5rem
+            - generic [ref=f24e549]:
+              - text: full
+              - generic [ref=f24e550]: / 9999px
+    - region [ref=f24e551]:
+      - generic [ref=f24e552]:
+        - generic [ref=f24e553]:
+          - paragraph [ref=f24e554]: 04 / DESIGN TOKENS
+          - heading "Components / คอมโพเนนต์" [level=2] [ref=f24e555]
+          - paragraph [ref=f24e556]: ตัวอย่างใช้งานจากคอมโพเนนต์และสไตล์เดียวกับหน้าแรก — ลองกดตัวกรองหรือทดลองพิมพ์ในช่องกรอกได้
+        - generic [ref=f24e557]: COFFEE CORNER ✳
+      - generic [ref=f24e558]:
+        - generic [ref=f24e559]:
+          - generic [ref=f24e560]:
+            - paragraph [ref=f24e561]: BUTTONS / ปุ่ม
+            - heading "ชัดเจน และชวนให้กด" [level=3] [ref=f24e562]
+            - paragraph [ref=f24e563]: ปุ่มหลักใช้สีคั่วเข้ม ส่วนปุ่มรองใช้พื้นกระดาษและเส้นขอบโทนอุ่น
+            - generic [ref=f24e564]:
+              - button "ยืนยันออเดอร์" [ref=f24e565] [cursor=pointer]:
+                - text: ยืนยันออเดอร์
+                - generic [aria-hidden] [ref=f24e566]: ↗
+              - link "ดูเมนูทั้งหมด" [ref=f24e567] [cursor=pointer]:
+                - /url: /#menu
+          - generic [ref=f24e568]:
+            - paragraph [ref=f24e569]: FILTER PILLS / หมวดหมู่
+            - heading "เลือกสิ่งที่อยากดื่ม" [level=3] [ref=f24e570]
+            - paragraph [ref=f24e571]: ปุ่มตัวกรองชุดเดียวกับหน้าเมนู ลองเลือกเพื่อดูรายการจริง
+            - group "ตัวอย่างตัวกรองหมวดเครื่องดื่ม" [ref=f24e572]:
+              - button "ทั้งหมด" [pressed] [ref=f24e573] [cursor=pointer]
+              - button "Coffee" [ref=f24e574] [cursor=pointer]
+              - button "Tea" [ref=f24e575] [cursor=pointer]
+              - button "Other" [ref=f24e576] [cursor=pointer]
+        - generic [ref=f24e577]:
+          - generic [ref=f24e578]:
+            - generic [ref=f24e579]:
+              - generic [ref=f24e580]:
+                - paragraph [ref=f24e581]: MENU CARDS / รายการเครื่องดื่ม
+                - heading "หน้าตาจริงจากหน้าเมนู" [level=3] [ref=f24e582]
+              - generic [ref=f24e583]: 6 เมนู
+            - generic [ref=f24e584]:
+              - article [ref=f24e585]:
+                - generic [aria-hidden] [ref=f24e586]:
+                  - generic [ref=f24e588]: ☕
+                  - generic [ref=f24e589]: COFFEE
+                - generic [ref=f24e590]:
+                  - heading "Americano" [level=3] [ref=f24e591]
+                  - generic [ref=f24e592]:
+                    - paragraph [ref=f24e593]: ต่อแก้ว
+                    - paragraph [ref=f24e594]: 60 บาท
+              - article [ref=f24e595]:
+                - generic [aria-hidden] [ref=f24e596]:
+                  - generic [ref=f24e598]: 🥛
+                  - generic [ref=f24e599]: COFFEE
+                - generic [ref=f24e600]:
+                  - heading "Latte" [level=3] [ref=f24e601]
+                  - generic [ref=f24e602]:
+                    - paragraph [ref=f24e603]: ต่อแก้ว
+                    - paragraph [ref=f24e604]: 70 บาท
+              - article [ref=f24e605]:
+                - generic [aria-hidden] [ref=f24e606]:
+                  - generic [ref=f24e608]: 🍫
+                  - generic [ref=f24e609]: หมด
+                  - generic [ref=f24e610]: COFFEE
+                - generic [ref=f24e611]:
+                  - heading "Mocha หมด" [level=3] [ref=f24e612]:
+                    - text: Mocha
+                    - generic [ref=f24e613]: หมด
+                  - generic [ref=f24e614]:
+                    - paragraph [ref=f24e615]: ต่อแก้ว
+                    - paragraph [ref=f24e616]: 75 บาท
+              - article [ref=f24e617]:
+                - generic [aria-hidden] [ref=f24e618]:
+                  - generic [ref=f24e620]: 🍵
+                  - generic [ref=f24e621]: TEA
+                - generic [ref=f24e622]:
+                  - heading "Matcha Latte" [level=3] [ref=f24e623]
+                  - generic [ref=f24e624]:
+                    - paragraph [ref=f24e625]: ต่อแก้ว
+                    - paragraph [ref=f24e626]: 80 บาท
+              - article [ref=f24e627]:
+                - generic [aria-hidden] [ref=f24e628]:
+                  - generic [ref=f24e630]: 🧋
+                  - generic [ref=f24e631]: TEA
+                - generic [ref=f24e632]:
+                  - heading "Thai Tea" [level=3] [ref=f24e633]
+                  - generic [ref=f24e634]:
+                    - paragraph [ref=f24e635]: ต่อแก้ว
+                    - paragraph [ref=f24e636]: 55 บาท
+              - article [ref=f24e637]:
+                - generic [aria-hidden] [ref=f24e638]:
+                  - generic [ref=f24e640]: 🍫
+                  - generic [ref=f24e641]: OTHER
+                - generic [ref=f24e642]:
+                  - heading "Cocoa" [level=3] [ref=f24e643]
+                  - generic [ref=f24e644]:
+                    - paragraph [ref=f24e645]: ต่อแก้ว
+                    - paragraph [ref=f24e646]: 65 บาท
+            - paragraph [ref=f24e647]: Mocha แสดงป้าย “หมด” และเลือกสั่งซื้อไม่ได้ในหน้าแรก
+          - generic [ref=f24e648]:
+            - paragraph [ref=f24e649]: FORM FIELDS / ช่องกรอก
+            - heading "พื้นที่สำหรับคำสั่งซื้อ" [level=3] [ref=f24e650]
+            - paragraph [ref=f24e651]: ตัวอย่างช่องกรอกแบบเดียวกับฟอร์มสั่งซื้อจริง แต่ไม่ส่งออเดอร์
+            - generic [ref=f24e652]:
+              - generic [ref=f24e653]:
+                - generic [ref=f24e654]: ชื่อผู้สั่ง
+                - textbox "ชื่อผู้สั่ง" [ref=f24e655]:
+                  - /placeholder: เช่น มินตรา
+              - generic [ref=f24e656]:
+                - generic [ref=f24e657]: เมนูที่เลือก
+                - combobox "เมนูที่เลือก" [ref=f24e658]:
+                  - option "เลือกเครื่องดื่ม" [selected]
+                  - option "Americano — 60 บาท"
+                  - option "Latte — 70 บาท"
+                  - option "Mocha — 75 บาท · หมด" [disabled]
+                  - option "Matcha Latte — 80 บาท"
+                  - option "Thai Tea — 55 บาท"
+                  - option "Cocoa — 65 บาท"
+              - generic [ref=f24e659]:
+                - generic [ref=f24e660]: หมายเหตุ (ไม่บังคับ)
+                - textbox "หมายเหตุ (ไม่บังคับ)" [ref=f24e661]:
+                  - /placeholder: เช่น หวานน้อย ไม่ใส่น้ำแข็ง
+    - generic [ref=f24e662]:
+      - generic [ref=f24e663]: "Artisanal Thai Roast · Design reference: DESIGN.md"
+      - link "กลับไปหน้าเมนู ↗" [ref=f24e664] [cursor=pointer]:
+        - /url: /
+  - alert [ref=f24e665]: Artisanal Thai Roast

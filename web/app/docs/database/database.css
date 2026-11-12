@@ -1,0 +1,84 @@
+.database-doc {
+  color: var(--color-on-surface);
+  line-height: 1.75;
+}
+
+.database-doc h1 {
+  margin: 0.5rem 0 1rem;
+  color: var(--color-primary);
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.database-doc h2 {
+  margin: 2.5rem 0 1rem;
+  color: var(--color-primary);
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.database-doc h3 {
+  margin: 2rem 0 0.75rem;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.database-doc p,
+.database-doc ul {
+  margin: 0.75rem 0;
+}
+
+.database-doc ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.database-doc li + li {
+  margin-top: 0.5rem;
+}
+
+.database-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 36rem;
+}
+
+.database-doc table th,
+.database-doc table td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.database-doc table th {
+  background: var(--color-surface-container-low);
+  color: var(--color-primary);
+}
+
+.database-doc table {
+  display: block;
+  overflow-x: auto;
+}
+
+.database-doc code {
+  overflow-wrap: anywhere;
+  color: var(--color-primary);
+}
+
+.database-diagram {
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  background: white;
+}
+
+.database-diagram svg {
+  display: block;
+  min-width: 38rem;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}

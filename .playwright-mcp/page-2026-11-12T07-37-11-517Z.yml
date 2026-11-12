@@ -1,0 +1,119 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "Coffee Corner หน้าแรก" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=f1e5]: ☕
+        - generic [ref=f1e6]:
+          - generic [ref=f1e7]: coffee corner
+          - generic [ref=f1e8]: YOUR DAILY CUP
+      - navigation "เมนูหลัก" [ref=f1e9]:
+        - link "เมนูเครื่องดื่ม" [ref=f1e10] [cursor=pointer]:
+          - /url: /#menu
+        - link "ออเดอร์ล่าสุด" [ref=f1e11] [cursor=pointer]:
+          - /url: /#orders
+        - link "ประวัติออเดอร์" [ref=f1e12] [cursor=pointer]:
+          - /url: /orders
+        - link "Design System" [ref=f1e13] [cursor=pointer]:
+          - /url: /design
+        - link "Database Doc" [ref=f1e14] [cursor=pointer]:
+          - /url: /docs/database
+      - link "สั่งล่วงหน้า" [ref=f1e15] [cursor=pointer]:
+        - /url: /#order-form
+        - text: สั่งล่วงหน้า
+        - generic [aria-hidden] [ref=f1e16]: ↗
+  - main [ref=f1e17]:
+    - region [ref=f1e18]:
+      - paragraph [ref=f1e19]: COFFEE CORNER / ORDER ARCHIVE
+      - heading "ประวัติออเดอร์" [level=1] [ref=f1e20]
+      - paragraph [ref=f1e21]: ทุกแก้วที่สั่งไว้ในฐานข้อมูลของร้าน สรุปยอดและดูรายละเอียดได้ในที่เดียว
+      - link "สั่งเครื่องดื่มเพิ่ม" [ref=f1e22] [cursor=pointer]:
+        - /url: /#order-form
+        - text: สั่งเครื่องดื่มเพิ่ม
+        - generic [aria-hidden] [ref=f1e23]: ↗
+    - region [ref=f1e24]:
+      - generic [ref=f1e25]:
+        - paragraph [ref=f1e26]: 01 / AT A GLANCE
+        - heading "ภาพรวมการสั่งซื้อ" [level=2] [ref=f1e27]
+      - generic [ref=f1e28]:
+        - article [ref=f1e29]:
+          - paragraph [ref=f1e30]: จำนวนออเดอร์
+          - paragraph [ref=f1e31]: "6"
+          - paragraph [ref=f1e32]: รายการที่บันทึกไว้
+        - article [ref=f1e33]:
+          - paragraph [ref=f1e34]: จำนวนแก้ว
+          - paragraph [ref=f1e35]: "11"
+          - paragraph [ref=f1e36]: แก้วทั้งหมด
+        - article [ref=f1e37]:
+          - paragraph [ref=f1e38]: ยอดรวม (บาท)
+          - paragraph [ref=f1e39]: 715 บาท
+          - paragraph [ref=f1e40]: รวมทุกออเดอร์
+        - article [ref=f1e41]:
+          - paragraph [ref=f1e42]: เมนูขายดี
+          - paragraph [ref=f1e43]: Latte
+          - paragraph [ref=f1e44]: 4 แก้ว · นับตามจำนวนแก้ว
+    - region [ref=f1e45]:
+      - generic [ref=f1e46]:
+        - generic [ref=f1e47]:
+          - paragraph [ref=f1e48]: 02 / EVERY CUP
+          - heading "ออเดอร์ทั้งหมด" [level=2] [ref=f1e49]
+        - generic [ref=f1e50]: 6 รายการ
+      - region "ตารางออเดอร์ทั้งหมด" [ref=f1e51]:
+        - table [ref=f1e52]:
+          - rowgroup [ref=f1e53]:
+            - row [ref=f1e54]:
+              - columnheader "ผู้สั่ง" [ref=f1e55]
+              - columnheader "เมนู" [ref=f1e56]
+              - columnheader "จำนวน" [ref=f1e57]
+              - columnheader "หมายเหตุ" [ref=f1e58]
+              - columnheader "ราคารวม" [ref=f1e59]
+          - rowgroup [ref=f1e60]:
+            - row [ref=f1e61]:
+              - rowheader [ref=f1e62]:
+                - text: ทดสอบ DB จากฟอร์ม
+                - time [ref=f1e63]: 12 พ.ย. 2569 14:36
+              - cell "Latte" [ref=f1e64]
+              - cell "2 แก้ว" [ref=f1e65]
+              - cell "ทดสอบบันทึกผ่านเว็บ" [ref=f1e66]
+              - cell "140 บาท" [ref=f1e67]
+            - row [ref=f1e68]:
+              - rowheader [ref=f1e69]:
+                - text: Ton
+                - time [ref=f1e70]: 2 ต.ค. 2569 13:20
+              - cell "Cocoa" [ref=f1e71]
+              - cell "2 แก้ว" [ref=f1e72]
+              - cell "ไม่ใส่วิปครีม" [ref=f1e73]
+              - cell "130 บาท" [ref=f1e74]
+            - row [ref=f1e75]:
+              - rowheader [ref=f1e76]:
+                - text: Ploy
+                - time [ref=f1e77]: 2 ต.ค. 2569 08:55
+              - cell "Matcha Latte" [ref=f1e78]
+              - cell "1 แก้ว" [ref=f1e79]
+              - cell "—" [ref=f1e80]
+              - cell "80 บาท" [ref=f1e81]
+            - row [ref=f1e82]:
+              - rowheader [ref=f1e83]:
+                - text: Mint
+                - time [ref=f1e84]: 1 ต.ค. 2569 10:05
+              - cell "Thai Tea" [ref=f1e85]
+              - cell "3 แก้ว" [ref=f1e86]
+              - cell "แยกน้ำแข็ง" [ref=f1e87]
+              - cell "165 บาท" [ref=f1e88]
+            - row [ref=f1e89]:
+              - rowheader [ref=f1e90]:
+                - text: Bank
+                - time [ref=f1e91]: 1 ต.ค. 2569 09:40
+              - cell "Americano" [ref=f1e92]
+              - cell "1 แก้ว" [ref=f1e93]
+              - cell "—" [ref=f1e94]
+              - cell "60 บาท" [ref=f1e95]
+            - row [ref=f1e96]:
+              - rowheader [ref=f1e97]:
+                - text: Ploy
+                - time [ref=f1e98]: 1 ต.ค. 2569 09:15
+              - cell "Latte" [ref=f1e99]
+              - cell "2 แก้ว" [ref=f1e100]
+              - cell "หวานน้อย" [ref=f1e101]
+              - cell "140 บาท" [ref=f1e102]
+      - paragraph [ref=f1e103]: ข้อมูลอ่านจากฐานข้อมูลของร้าน ไม่เชื่อมบัญชีผู้ใช้หรือระบบชำระเงิน
